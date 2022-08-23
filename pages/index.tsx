@@ -28,6 +28,12 @@ const Home: NextPage = () => {
     }
   }
 
+  const sendTransaction = () => {
+    const ownerKeypair = Web3.Keypair.generate();
+    const publicKey = ownerKeypair.publicKey;
+    const privateKey = ownerKeypair.secretKey;
+  }
+
   return (
     <div className={styles.App}>
       <header className={styles.AppHeader}>
