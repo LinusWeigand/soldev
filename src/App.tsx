@@ -54,3 +54,6 @@ const App = () => {
 }
 
 export default App;
+
+// DAoVJ3GqAnzMCjqNmLb559hZ2LbyBFWiKpPzCPJjHMkT - has SOL
+// CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN - is executable
