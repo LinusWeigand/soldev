@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import * as Web3 from '@solana/web3.js'
+import AddressForm from './components/AddressForm'
+import './styles/App.css';
 
 const App = () => {
   const [balance, setBalance] = useState(0)
@@ -37,8 +39,16 @@ const App = () => {
   }
 
   return (
-    <div>
-
+    <div className="App">
+      <header className="AppHeader">
+        <p>
+          Solana Explorer
+        </p>
+        <AddressForm handler={addressSubmittedHandler} />
+        <p>{`Address: ${address}`}</p>
+        <p>{`Balance: ${balance} SOL`}</p>
+        <p>{`Is it executable? ${executable ? "Yep" : "Nope"}`}</p>
+      </header>
     </div>
   );
 }

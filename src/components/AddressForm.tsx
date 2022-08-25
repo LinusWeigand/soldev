@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react"
-import styles from './AddressForm.module.css'
+const styles = require('../styles/AddressForm.css');
 
 
 const AddressForm = (props: { handler: (address: string) => void }) => {
@@ -22,9 +22,25 @@ const AddressForm = (props: { handler: (address: string) => void }) => {
     };
 
     return (
-        <div className={styles.Form}>
+        <div className="Form">
+            <form onSubmit={handleSubmit}>
+                <input
+                    id="public-key"
+                    className="formField"
+                    type="text"
+                    placeholder="Public Address"
+                    name="address"
+                    value={values.address}
+                    onChange={handleAddressInputChange}
+                />
+                    <br />
+                    <button type="submit" className="formButton">
+                        Check SOL Balance
+                    </button>
+            </form>
 
         </div>
-    )
-    
+    );
 }
+
+export default AddressForm;
